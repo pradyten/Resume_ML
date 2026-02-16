@@ -3,10 +3,10 @@
 % Packages:
 \usepackage[
     ignoreheadfoot, % set margins without considering header and footer
-    top=1.7 cm, % seperation between body and page edge from the top
-    bottom=1.7 cm, % seperation between body and page edge from the bottom
-    left=1.7 cm, % seperation between body and page edge from the left
-    right=1.7 cm, % seperation between body and page edge from the right
+    top=1.4 cm, % seperation between body and page edge from the top
+    bottom=1.4 cm, % seperation between body and page edge from the bottom
+    left=1.4 cm, % seperation between body and page edge from the left
+    right=1.4 cm, % seperation between body and page edge from the right
     footskip=1.0 cm, % seperation between body and footer
     % showframe % for debugging
 ]{geometry} % for adjusting page geometry
@@ -19,8 +19,8 @@
 \usepackage{fontawesome5} % for using icons
 \usepackage{amsmath} % for math
 \usepackage[
-    pdftitle={John Doe's CV},
-    pdfauthor={John Doe},
+    pdftitle={Pradyumn Tendulkar's Resume},
+    pdfauthor={Pradyumn Tendulkar},
     pdfcreator={LaTeX with RenderCV},
     colorlinks=true,
     linkcolor=blue,
@@ -142,7 +142,7 @@
         \LenToUnit{\paperwidth-3 cm-0 cm+0.05cm},
         \LenToUnit{\paperheight-1.0 cm}
     ){\vtop{{\null}\makebox[0pt][c]{
-        \small\color{gray}\textit{Last updated in September 2024}\hspace{\widthof{Last updated in September 2024}}
+        \small\color{gray}\textit{Last updated in February 2026}\hspace{\widthof{Last updated in February 2026}}
     }}}%
   }%
 }%
@@ -154,12 +154,12 @@
 
 
 \begin{document}
-    \newsavebox\ANDbox
-    \sbox\ANDbox{$|$}
     \newcommand{\AND}{\unskip
         \cleaders\copy\ANDbox\hskip\wd\ANDbox
         \ignorespaces
     }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{$|$}
 
     \begin{header}
     \vspace{-2cm}
@@ -167,7 +167,7 @@
 
 
         \normalsize
-        \mbox{Boston, MA (Open to Reloacate)}%
+        \mbox{Boston, MA}%
         \kern 5.0 pt%
         \AND%
         \kern 5.0 pt%
@@ -183,7 +183,7 @@
         \kern 5.0 pt%
          \AND%
          \kern 5.0 pt%
-         \mbox{\hrefWithoutArrow{https://github.com/pradyten}{github}}%
+         \mbox{\hrefWithoutArrow{https://github.com/pradyten}{https://github.com/pradyten}}%
     \end{header}
 
     \vspace{5 pt - 0.3 cm}
@@ -193,10 +193,13 @@
         \begin{twocolentry}{
             Graduation Date: Dec 2025
         }
-            \textbf{Worcester Polytechnic Institute, Worcester, MA } \end{twocolentry}
+            \textbf{Worcester Polytechnic Institute, Worcester, MA}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
         \begin{onecolentry}
-            MS in Data Science (GPA: 4.0)
-            \\Relevant Courses: Deep Learning, Natural Language Processing, Statistical Methods for Data Science, MLOps, Business Intelligence
+            MS in Data Science (GPA: 4.0)\\
+            Relevant Courses: Deep Learning, Natural Language Processing, Statistical Methods for Data Science, MLOps, Business Intelligence
         \end{onecolentry}
 
         \vspace{0.10 cm}
@@ -204,129 +207,125 @@
         \begin{twocolentry}{
             Aug 2021 - May 2024
         }
-            \textbf{Vellore Institute of Technology, India}\end{twocolentry}
+            \textbf{Vellore Institute of Technology, India}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
         \begin{onecolentry}
-            BTech in Computer Science and Engineering (GPA: 3.56)
-            \\Relevant Courses: Python, Machine Learning, Natural Language Processing, Software Engineering, Database Management Systems
+            BTech in Computer Science and Engineering (GPA: 3.56)\\
+            Relevant Courses: Python, Machine Learning, Natural Language Processing, Software Engineering, Database Management Systems
         \end{onecolentry}
 
         \vspace{0.10 cm}
 
-   
-    \section{Relevant Experience}
 
-         \begin{twocolentry}{
+    \section{Skills}
+
+        \begin{onecolentry}
+            \textbf{Languages:} Python, C/C++, SQL, TypeScript, R \\
+            \textbf{ML \& NLP:} PyTorch, TensorFlow, Scikit-learn, XGBoost, Hugging Face, Sentence-Transformers, spaCy, NLTK, Gensim, Keras \\
+            \textbf{LLM \& GenAI:} OpenAI API, Claude API, LangChain, RAG, Fine-Tuning, Prompt Engineering, Agentic AI, Vector Databases \\
+            \textbf{Cloud \& MLOps:} AWS (Bedrock, Lambda, Step Functions, SageMaker, Textract, Comprehend), GCP, Docker, Kubernetes, W\&B, CI/CD \\
+            \textbf{Data \& Tools:} Pandas, NumPy, Pydantic, FastAPI, Streamlit, PostgreSQL, MongoDB, Git
+        \end{onecolentry}
+
+        \vspace{0.10 cm}
+
+
+    \section{Experience}
+
+        \begin{twocolentry}{
             Aug 2025 – Dec 2025
         }
-            \textbf{Data Scientist}, CrossingLegal, Boston, MA \end{twocolentry}
+            \textbf{Machine Learning Engineer}, CrossingLegal, Boston, MA
+        \end{twocolentry}
 
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                
-                \item \textbf{Transformed H-1B processing time from 5 days to 10 minutes} by architecting a multi-agent document validation system using AWS Step Functions and Lambda to automate the intake of complex visa packages.  
-                \item \textbf{Achieved 95–99\% structural accuracy in document validation} by engineering an automated extraction pipeline using AWS Bedrock and OpenAI to convert unstructured H-1B evidence into a standardized canonical JSON schema.  
-                \item \textbf{Resolved extraction ambiguities across 50+ critical fields} by developing a hybrid validation engine that combined deterministic logic with a RAG fallback layer to perform cross-document consistency checks for Form I-129. 
-                \item \textbf{Boosted operational efficiency by 80\% and reduced per-case costs by 70\%} by producing unified quality check report that reclaimed 2,000+ expert hours per season and decreased avoidable Requests for Evidence (RFEs). 
+                \item Architected multi-agent validation pipeline using \textbf{AWS Step Functions}, \textbf{Lambda}, and \textbf{Bedrock Claude API} for vision-based PDF extraction into structured JSON, reducing H-1B processing from 5 days to 10 minutes.
+                \item Built RAG fallback system with \textbf{Titan embeddings}, in-memory vector store, and \textbf{cosine similarity retrieval} to resolve ambiguities across 50+ Form I-129 fields, achieving 95-99\% extraction accuracy.
+                \item Developed LLM validation layer using \textbf{OpenAI}, \textbf{Pydantic} schema enforcement, and \textbf{Textract}-based KB construction, cutting manual verification effort by 70-90\%.
             \end{highlights}
         \end{onecolentry}
 
-
         \vspace{0.2 cm}
-        
+
         \begin{twocolentry}{
             Jun 2025 – Aug 2025
         }
-            \textbf{Data Science Intern}, Boredm LLC, Phoenix, AZ \end{twocolentry}
+            \textbf{Machine Learning Intern}, Boredm LLC, Phoenix, AZ
+        \end{twocolentry}
 
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                
-                \item \textbf{Generated diverse training datasets for GPT-3.5-turbo fine-tuning} by designing an automated data synthesis and processing pipeline using Python and TypeScript to produce complex soil lithology descriptions across 12 variants and 54 entities.  
-                \item \textbf{Slashed manual soil lithology description annotation time by 90\%} while maintaining 99.1\% production accuracy by deploying and monitoring an AI-driven data entry system that supported 10,000+ user interactions. 
-                \item \textbf{Boosted deployment velocity by 15\%} and minimized average bug resolution time by 2 days by spearheading debugging and QA protocols for core system features. 
+                \item Fine-tuned \textbf{GPT-4o-mini} via \textbf{OpenAI API} on 1000+ balanced examples for 58-entity NER extraction, implementing \textbf{Pydantic} schema validation to achieve 99.1\% production accuracy on soil lithology descriptions.
+                \item Engineered synthetic data pipeline using \textbf{Python-TypeScript} hybrid architecture with dependency-aware generation, keyboard-proximity corruption, and 12 structural variants, reducing manual annotation time by 90\%.
             \end{highlights}
         \end{onecolentry}
-
 
         \vspace{0.2 cm}
 
-       
         \begin{twocolentry}{
             Oct 2024 – May 2025
         }
-            \textbf{Research Assistant}, Worcester Polytechnic Institute, Worcester, MA \end{twocolentry}
+            \textbf{Research Assistant}, Worcester Polytechnic Institute, Worcester, MA \hrefWithoutArrow{https://aisel.aisnet.org/amcis2025/data_science/sig_dsa/8/}{(Link)}
+        \end{twocolentry}
 
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item \textbf{Published and presented a peer-reviewed paper at \hrefWithoutArrow{https://aisel.aisnet.org/amcis2025/data_science/sig_dsa/8/}{AMCIS 2025}} by developing a zero-shot summarization framework using GPT-4 to generate \textbf{context-aware} abstractive summaries from unlabeled Amazon product reviews.  
-                \item \textbf{Rivaled Amazon’s proprietary summarization performance with 0.9417 cosine similarity} with original reviews (vs. Amazon’s 0.9439) by engineering a custom prompt refinement technique for scalable and cost-effective e-commerce integration.  
+                \item Developed zero-shot summarization framework using \textbf{GPT-4}, \textbf{Gensim GloVe embeddings}, and \textbf{NLTK} preprocessing to generate abstractive summaries from 5000+ Amazon reviews, published at \textbf{AMCIS 2025}.
+                \item Achieved 0.9417 cosine similarity with Amazon's proprietary summaries using \textbf{scikit-learn} cosine similarity, \textbf{iterative prompt refinement}, and \textbf{BERTScore} validation on \textbf{Playwright}-scraped review data.
             \end{highlights}
         \end{onecolentry}
-
 
         \vspace{0.2 cm}
 
         \begin{twocolentry}{
             May 2023 – Jul 2023
         }
-            \textbf{Data Science Intern}, SmartStream Technologies -- India\end{twocolentry}
+            \textbf{Machine Learning Intern}, SmartStream Technologies -- India
+        \end{twocolentry}
 
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item \textbf{Attained 99\% extraction accuracy across complex PDF formats} by building two end-to-end ETL pipelines on AWS using Textract, SageMaker, and Comprehend NER to automate a global exchange notification service.
-                \item \textbf{Condensed entity extraction cycles from 4 months to 3 weeks (80\% improvement)} and halved workforce demand by replacing a legacy rule-based system with scalable ML workflows. 
-                \item \textbf{Upskilled 50+ global employees across Europe, Australia, and India} by delivering a 1‑week hands‑on training program on ML fundamentals, data cleaning with Pandas, and AWS, which led to adoption of the new automation pipeline across teams.
-               
+                \item Built end-to-end NER pipeline using \textbf{AWS Textract}, \textbf{SageMaker Ground Truth} (custom annotation template), and \textbf{Comprehend Custom Entity Recognition} to extract entities from native PDF/Word documents, achieving 99\% accuracy.
+                \item Replaced legacy rule-based extraction with \textbf{Comprehend ML workflows} and \textbf{CloudFormation}-deployed annotation infrastructure, reducing entity extraction cycles from 4 months to 3 weeks (80\% improvement).
             \end{highlights}
         \end{onecolentry}
 
-        
         \vspace{0.10 cm}
 
-   
-    \section{Project Experience}
 
-    \begin{twocolentry}{}
-    \textbf{Generalizable Vision-to-JSON Extraction Framework} (\hrefWithoutArrow{https://huggingface.co/spaces/pradyten/pdf-extractor}{Live Demo})
-\end{twocolentry}
+    \section{Projects}
 
-\vspace{0.10 cm}
+        \begin{twocolentry}{}
+            \textbf{Generalizable Vision-to-JSON Extraction Framework} (\hrefWithoutArrow{https://huggingface.co/spaces/pradyten/pdf-extractor}{Live Demo})
+        \end{twocolentry}
 
-\begin{onecolentry}
-    \begin{highlights}
-        \item \textbf{Enabled high-precision data extraction from any PDF layout} by engineering a vision-based intelligence system using Claude-3 (AWS Bedrock) that renders documents into adaptive-DPI images for zero-shot extraction into structured JSON.  
-        \item \textbf{Enforced 100\% schema compliance across 10+ diverse document categories}—including legal forms, transcripts, and identity records—by designing a template-driven extraction engine that maps visual content to complex, hierarchical JSON structures.
-    \end{highlights}
-\end{onecolentry}
-
-\vspace{1mm}
-
-\begin{twocolentry}{}
-    \textbf{Predictive Modeling of Water Turbidity Using Remote Sensing Indices  }
-\end{twocolentry}
-
-\vspace{0.10 cm}
-
-\begin{onecolentry}
-    \begin{highlights}
-        \item \textbf{Co-authored a conference paper} that overturned traditional scientific assumptions of linear correlation between water depth (NDWI) and turbidity (NDTI) through a 2-year time-series analysis of major Indian lakes.
-        \item \textbf{Exceeded ARIMA and linear regression benchmarks with a peak R² score of 0.95} by implementing deep learning forecasting architectures, including CNN+RNN and LSTM ensembles, for high-accuracy water quality prediction. 
-    \end{highlights}
-\end{onecolentry}
-
- \vspace{0.10 cm}
-
-    \section{Skills}
-       
+        \vspace{0.10 cm}
         \begin{onecolentry}
-        \textbf{Data Engineering:} SQL, R, ETL pipelines, AWS Lambda, Step Functions, API data ingestion, schema enforcement.
-        \\\textbf{Automation:} Power BI, Excel (advanced formulas), Python, workflow automation, Git, Docker, REST APIs.
-            \\\textbf{Applied AI:} PyTorch, TensorFlow, Scikit-learn, Generative AI (LLMs), Deep Learning, NLP, and Time Series Forecasting.
+            \begin{highlights}
+                \item Built vision-based PDF extraction system using \textbf{OpenAI Vision API} (GPT-4.1), \textbf{pypdfium2}, and \textbf{Pillow} with adaptive DPI rendering (300/145/110 based on page count), deployed on \textbf{Hugging Face Spaces} with \textbf{Streamlit} UI.
+                \item Designed template-driven extraction engine supporting 12 document types (I-129, passports, resumes, transcripts) with JSON schema enforcement, achieving 100\% structural compliance across immigration and identity documents.
+            \end{highlights}
+        \end{onecolentry}
 
+        \vspace{0.10 cm}
+
+        \begin{twocolentry}{}
+            \textbf{Predictive Modeling of Water Turbidity Using Remote Sensing Indices}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Co-authored paper (accepted at \textbf{ICFAiSE 2025}) disproving linear correlation assumptions between water depth (NDWI) and turbidity (NDTI) through 2-year time-series analysis of Indian lakes using \textbf{ARDL models}, \textbf{Random Forest}, and \textbf{XGBoost}.
+                \item Achieved R\textsuperscript{2} = 0.98 using \textbf{LSTM} (\textbf{TensorFlow/Keras}, \textbf{PyTorch}) for turbidity prediction, outperforming ARIMA and linear regression baselines on sliding-window time-series frameworks.
+            \end{highlights}
         \end{onecolentry}
 
    

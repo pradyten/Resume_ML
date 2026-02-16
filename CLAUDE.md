@@ -43,17 +43,18 @@ The preamble defines reusable environments that all content sections depend on:
 
 Sections appear in this fixed order:
 1. **Header** — Name, location, email, phone, LinkedIn, GitHub
-2. **Education** — `twocolentry` for school+dates, then `onecolentry` for degree and courses (lines separated by `\\`)
-3. **Relevant Experience** — `twocolentry` for title+dates, then `onecolentry` > `highlights` for bullet points
-4. **Project Experience** — Same pattern as experience but `twocolentry{}` with empty date column
-5. **Skills** — Single `onecolentry` with category labels in bold, lines separated by `\\`
+2. **Skills** — Five categories: Languages, ML & NLP, LLM & GenAI, Cloud & MLOps, Data & Tools
+3. **Education** — `twocolentry` for school+dates, then `onecolentry` for degree and courses (lines separated by `\\`)
+4. **Experience** — `twocolentry` for title+dates, then `onecolentry` > `highlights` for bullet points
+5. **Projects** — Same pattern as experience but `twocolentry{}` with empty date column
 
 ## Editing Conventions
 
-- **Bullet point style**: Bold lead phrase states the measurable impact, followed by the method/approach. Example: `\item \textbf{Achieved 99\% accuracy} by building an ETL pipeline using...`
+- **Bullet point style**: Bold key technical terms and technologies within each bullet point. Example: `\item Built system using \textbf{AWS Lambda}, \textbf{Docker}, and \textbf{PostgreSQL} to achieve 99\% accuracy...`
 - **Links**: Use `\hrefWithoutArrow{url}{text}` (a saved copy of `\href` without arrow decoration, defined at line 151)
 - **PDF metadata**: Update `pdftitle` and `pdfauthor` in the `\usepackage[...]{hyperref}` block (lines 21–29) when changing the resume owner
 - **Last updated watermark**: `\placelastupdatedtext` (line 139) places a gray italic timestamp — update the date string inside when modifying content
+- **Page margins**: Set to 1.4cm on all sides (lines 6-9) for optimal single-page fit
 - **Spacing**: Use `\vspace{0.10 cm}` between entries within a section, `\vspace{0.2 cm}` between experience entries
 - **ATS compatibility**: The `\ifPDFTeX` block (lines 41–47) enables glyph-to-unicode mapping for machine-readable PDFs — do not remove
 
