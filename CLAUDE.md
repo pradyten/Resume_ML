@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a LaTeX resume/CV for Pradyumn Tendulkar, a Data Science professional. The single source file `main.tex` produces a one-page PDF resume using the `extarticle` document class (9pt, letter paper). The template originates from [RenderCV](https://github.com/sinaatalay/rendercv).
+This is a LaTeX resume/CV for Pradyumn Tendulkar, an AI Engineer. The single source file `main.tex` produces a one-page PDF resume using the `extarticle` document class (9pt, letter paper). The template originates from [RenderCV](https://github.com/sinaatalay/rendercv).
 
 ## Build
 
@@ -43,10 +43,10 @@ The preamble defines reusable environments that all content sections depend on:
 
 Sections appear in this fixed order:
 1. **Header** — Name, location, email, phone, LinkedIn, GitHub
-2. **Skills** — Five categories: Languages, ML & NLP, LLM & GenAI, Cloud & MLOps, Data & Tools
-3. **Education** — `twocolentry` for school+dates, then `onecolentry` for degree and courses (lines separated by `\\`)
+2. **Education** — `twocolentry` for school+dates, then `onecolentry` for degree and courses (lines separated by `\\`)
+3. **Skills** — Five categories ordered for AI Engineer roles: LLM & GenAI, ML & NLP, Cloud & MLOps, Languages, Data & Tools
 4. **Experience** — `twocolentry` for title+dates, then `onecolentry` > `highlights` for bullet points
-5. **Projects** — Same pattern as experience but `twocolentry{}` with empty date column
+5. **Projects** — Same pattern as experience but `twocolentry{Live Demo link}` with link in right column
 
 ## Editing Conventions
 
