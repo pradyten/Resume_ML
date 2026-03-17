@@ -168,21 +168,21 @@
 
         \normalsize
         \mbox{Boston, MA}%
-        \kern 5.0 pt%
+        \kern 2.0 pt%
         \AND%
-        \kern 5.0 pt%
-        \mbox{\hrefWithoutArrow{mailto:pktendulkar@wpi.edu}{pktendulkar@wpi.edu}}%
-        \kern 5.0 pt%
+        \kern 2.0 pt%
+        \mbox{\hrefWithoutArrow{mailto:pradyumnten.work@gmail.com}{pradyumnten.work@gmail.com}}%
+        \kern 2.0 pt%
         \AND%
-        \kern 5.0 pt%
-        \mbox{\hrefWithoutArrow{tel:+1 7745190324}{774-519-0324}}%
-        \kern 5.0 pt%
+        \kern 2.0 pt%
+        \mbox{\hrefWithoutArrow{tel:+1 7745190324}{7745190324}}%
+        \kern 2.0 pt%
         \AND%
-        \kern 5.0 pt%
+        \kern 2.0 pt%
         \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/p-tendulkar}{https://www.linkedin.com/in/p-tendulkar}}%
-        \kern 5.0 pt%
+        \kern 2.0 pt%
          \AND%
-         \kern 5.0 pt%
+         \kern 2.0 pt%
          \mbox{\hrefWithoutArrow{https://github.com/pradyten}{https://github.com/pradyten}}%
     \end{header}
 
@@ -220,11 +220,11 @@
     \section{Skills}
 
         \begin{onecolentry}
-            \textbf{Languages:} Python, C/C++, SQL, TypeScript, R \\
-            \textbf{ML \& NLP:} PyTorch, TensorFlow, Scikit-learn, XGBoost, Hugging Face, Sentence-Transformers, spaCy, NLTK, Gensim, Keras \\
-            \textbf{LLM \& GenAI:} OpenAI API, Claude API, LangChain, RAG, Fine-Tuning, Prompt Engineering, Agentic AI, Vector Databases \\
-            \textbf{Cloud \& MLOps:} AWS (Bedrock, Lambda, Step Functions, SageMaker, Textract, Comprehend), GCP, Docker, Kubernetes, W\&B, CI/CD \\
-            \textbf{Data \& Tools:} Pandas, NumPy, Pydantic, FastAPI, Streamlit, PostgreSQL, MongoDB, Git
+            \textbf{LLM \& GenAI:} OpenAI API, Claude API, Mistral, LangChain, LangGraph, Agentic AI, RAG, Pinecone, Fine-Tuning, Prompt Engineering \\
+            \textbf{ML \& NLP:} PyTorch, TensorFlow, Keras, Hugging Face, Sentence-Transformers, BERTScore, Scikit-learn, XGBoost, spaCy, NLTK, Gensim \\
+            \textbf{Cloud \& MLOps:} AWS (Bedrock, SageMaker, Lambda, Step Functions, Textract, Comprehend, CloudFormation), GCP, Vercel, W\&B, Docker, Kubernetes, CI/CD \\
+            \textbf{Languages:} Python, SQL, TypeScript, R, C/C++ \\
+            \textbf{Data \& Tools:} Pandas, NumPy, Pydantic, FastAPI, Streamlit, Playwright, Pillow, PostgreSQL, MongoDB, Git
         \end{onecolentry}
 
         \vspace{0.10 cm}
@@ -242,8 +242,8 @@
         \begin{onecolentry}
             \begin{highlights}
                 \item Architected multi-agent validation pipeline using \textbf{AWS Step Functions}, \textbf{Lambda}, and \textbf{Bedrock Claude API} for vision-based PDF extraction into structured JSON, reducing H-1B processing from 5 days to 10 minutes.
-                \item Built RAG fallback system with \textbf{Titan embeddings}, in-memory vector store, and \textbf{cosine similarity retrieval} to resolve ambiguities across 50+ Form I-129 fields, achieving 95-99\% extraction accuracy.
-                \item Developed LLM validation layer using \textbf{OpenAI}, \textbf{Pydantic} schema enforcement, and \textbf{Textract}-based KB construction, cutting manual verification effort by 70-90\%.
+                \item Constructed RAG fallback system with \textbf{Titan embeddings}, in-memory vector store, and \textbf{cosine similarity retrieval} to resolve ambiguities across 50+ Form I-129 fields, achieving 95-99\% extraction accuracy.
+                \item Integrated LLM validation layer using \textbf{OpenAI}, \textbf{Pydantic} schema enforcement, and \textbf{Textract}-based KB construction, cutting manual verification effort by 70-90\%.
             \end{highlights}
         \end{onecolentry}
 
@@ -275,7 +275,7 @@
         \begin{onecolentry}
             \begin{highlights}
                 \item Developed zero-shot summarization framework using \textbf{GPT-4}, \textbf{Gensim GloVe embeddings}, and \textbf{NLTK} preprocessing to generate abstractive summaries from 5000+ Amazon reviews, published at \textbf{AMCIS 2025}.
-                \item Achieved 0.9417 cosine similarity with Amazon's proprietary summaries using \textbf{scikit-learn} cosine similarity, \textbf{iterative prompt refinement}, and \textbf{BERTScore} validation on \textbf{Playwright}-scraped review data.
+                \item Attained 0.9417 cosine similarity with Amazon's proprietary summaries using \textbf{scikit-learn} cosine similarity, \textbf{iterative prompt refinement}, and \textbf{BERTScore} validation on \textbf{Playwright}-scraped review data.
             \end{highlights}
         \end{onecolentry}
 
@@ -290,7 +290,7 @@
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Built end-to-end NER pipeline using \textbf{AWS Textract}, \textbf{SageMaker Ground Truth} (custom annotation template), and \textbf{Comprehend Custom Entity Recognition} to extract entities from native PDF/Word documents, achieving 99\% accuracy.
+                \item Deployed end-to-end NER pipeline using \textbf{AWS Textract}, \textbf{SageMaker Ground Truth} (custom annotation template), and \textbf{Comprehend Custom Entity Recognition} to extract entities from native PDF/Word documents, achieving 99\% accuracy.
                 \item Replaced legacy rule-based extraction with \textbf{Comprehend ML workflows} and \textbf{CloudFormation}-deployed annotation infrastructure, reducing entity extraction cycles from 4 months to 3 weeks (80\% improvement).
             \end{highlights}
         \end{onecolentry}
@@ -300,15 +300,31 @@
 
     \section{Projects}
 
-        \begin{twocolentry}{}
-            \textbf{Generalizable Vision-to-JSON Extraction Framework} (\hrefWithoutArrow{https://huggingface.co/spaces/pradyten/pdf-extractor}{Live Demo})
+        \begin{twocolentry}{
+            \hrefWithoutArrow{https://huggingface.co/spaces/pradyten/pdf-extractor}{Live Demo}
+        }
+            \textbf{Generalizable Vision-to-JSON Extraction Framework}
         \end{twocolentry}
 
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Built vision-based PDF extraction system using \textbf{OpenAI Vision API} (GPT-4.1), \textbf{pypdfium2}, and \textbf{Pillow} with adaptive DPI rendering (300/145/110 based on page count), deployed on \textbf{Hugging Face Spaces} with \textbf{Streamlit} UI.
-                \item Designed template-driven extraction engine supporting 12 document types (I-129, passports, resumes, transcripts) with JSON schema enforcement, achieving 100\% structural compliance across immigration and identity documents.
+                \item Built vision-based PDF extraction system using \textbf{OpenAI Vision API} (GPT-4.1), \textbf{pypdfium2}, and \textbf{Pillow} with adaptive DPI rendering, supporting 12 document types (I-129, passports, resumes) with JSON schema enforcement, deployed on \textbf{Hugging Face Spaces}.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.10 cm}
+
+        \begin{twocolentry}{
+            \hrefWithoutArrow{https://legal-ai-hazel-xi.vercel.app/}{Live Demo}
+        }
+            \textbf{Legal AI Research Assistant}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Created full-stack RAG application using \textbf{LangGraph} (6-node pipeline), \textbf{FastAPI}, \textbf{GPT-4o}, and \textbf{Pinecone} for legal case research, with dual-layer confidence scoring (60\% retrieval + 40\% LLM self-assessment) and \textbf{Mistral} fallback, deployed on \textbf{Vercel}/\textbf{Railway}.
             \end{highlights}
         \end{onecolentry}
 
@@ -321,8 +337,7 @@
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Co-authored paper (accepted at \textbf{ICFAiSE 2025}) disproving linear correlation assumptions between water depth (NDWI) and turbidity (NDTI) through 2-year time-series analysis of Indian lakes using \textbf{ARDL models}, \textbf{Random Forest}, and \textbf{XGBoost}.
-                \item Achieved R\textsuperscript{2} = 0.98 using \textbf{LSTM} (\textbf{TensorFlow/Keras}, \textbf{PyTorch}) for turbidity prediction, outperforming ARIMA and linear regression baselines on sliding-window time-series frameworks.
+                \item Co-authored paper (accepted at \textbf{ICFAiSE 2025}) achieving R\textsuperscript{2}=0.98 using \textbf{LSTM} (\textbf{TensorFlow/Keras}, \textbf{PyTorch}) for turbidity prediction through 2-year time-series analysis of Indian lakes, outperforming ARIMA and linear regression baselines.
             \end{highlights}
         \end{onecolentry}
 
