@@ -14,7 +14,7 @@ pdflatex main.tex
 
 Requires a LaTeX distribution (MiKTeX on Windows, TeX Live on macOS/Linux). VS Code users: LaTeX Workshop is configured in `.vscode/settings.json` — save the file or press `Ctrl+Alt+B` to build. If `pdflatex` is not found, update the `command` path in `.vscode/settings.json` to match your local MiKTeX/TeX Live install.
 
-Key packages: `geometry`, `titlesec`, `tabularx`, `xcolor`, `enumitem`, `fontawesome5`, `hyperref`, `eso-pic`, `changepage`, `paracol`, `needspace`, `charter`, `iftex`.
+Key packages: `geometry`, `titlesec`, `xcolor`, `enumitem`, `hyperref`, `changepage`, `paracol`, `needspace`, `charter`, `iftex`.
 
 ## File Layout
 
@@ -24,7 +24,7 @@ Key packages: `geometry`, `titlesec`, `tabularx`, `xcolor`, `enumitem`, `fontawe
 
 ## Document Architecture
 
-### Preamble (lines 1–155): Custom Environments
+### Preamble: Custom Environments
 
 The preamble defines reusable environments that all content sections depend on:
 
@@ -32,31 +32,30 @@ The preamble defines reusable environments that all content sections depend on:
 |---|---|---|
 | `header` | Centered name + contact info block | Items separated by `\AND` (renders as `\|`) |
 | `twocolentry{date}` | Two-column row: content (left), date/location (right, 4.5cm) | Section headers for education and experience |
-| `threecolentry` | Three-column variant | Not currently used but available |
 | `onecolentry` | Full-width block (via `adjustwidth`) | Wraps degree info, bullet lists, skills |
 | `highlights` | Bulleted list (`itemize` with custom spacing) | Experience/project bullet points |
-| `highlightsforbulletentries` | Alternate bullet list with tighter left margin | Available but not currently used |
 
 **Critical ordering**: Inside `\begin{document}`, `\newsavebox\ANDbox` and `\sbox\ANDbox` must appear **before** `\newcommand{\AND}` — the `\AND` command references the box.
 
-### Body (lines 156–333): Resume Content
+### Body: Resume Content
 
-Sections appear in this fixed order:
-1. **Header** — Name, location, email, phone, LinkedIn, GitHub
-2. **Education** — `twocolentry` for school+dates, then `onecolentry` for degree and courses (lines separated by `\\`)
-3. **Skills** — Five categories ordered for AI Engineer roles: LLM & GenAI, ML & NLP, Cloud & MLOps, Languages, Data & Tools
-4. **Experience** — `twocolentry` for title+dates, then `onecolentry` > `highlights` for bullet points
-5. **Projects** — Same pattern as experience but `twocolentry{Live Demo link}` with link in right column
+Sections appear in this fixed order (order is deliberate — set by a 2026 section-ordering research pass: skills high for a tool-heavy technical role, experience before projects, the cert prominent but below the substance, publications/education last):
+1. **Header** — Name, location, email, phone, LinkedIn, GitHub, portfolio (three-line layout), immediately followed by an italic one-line summary in `onecolentry`
+2. **Skills** — Four categories in a `description` environment with a fixed `labelwidth` for aligned labels: LLM & GenAI, ML & NLP, Cloud & MLOps, Languages & Tools. Use non-breaking spaces (`~`) inside multi-word terms (e.g. `Unity~Catalog`) so they never wrap mid-term.
+3. **Experience** — `twocolentry` for title+dates, then `onecolentry` > `highlights` for bullet points
+4. **Projects** — Same pattern as experience but `twocolentry{link}` with `\hrefWithoutArrow{url}{Link}` in the right column
+5. **Certifications** — `twocolentry{date}` with the cert name (bold) + `Link` on the left, issue date on the right
+6. **Publications** — `twocolentry` per paper; title-only (italic), with `Link` in the right column where a URL exists
+7. **Education** — `twocolentry` for school+dates, then `onecolentry` > `highlights` for the courses line
 
 ## Editing Conventions
 
 - **Bullet point style**: Bold key technical terms and technologies within each bullet point. Example: `\item Built system using \textbf{AWS Lambda}, \textbf{Docker}, and \textbf{PostgreSQL} to achieve 99\% accuracy...`
-- **Links**: Use `\hrefWithoutArrow{url}{text}` (a saved copy of `\href` without arrow decoration, defined at line 151)
-- **PDF metadata**: Update `pdftitle` and `pdfauthor` in the `\usepackage[...]{hyperref}` block (lines 21–29) when changing the resume owner
-- **Last updated watermark**: `\placelastupdatedtext` (line 139) places a gray italic timestamp — update the date string inside when modifying content
-- **Page margins**: Set to 1.4cm on all sides (lines 6-9) for optimal single-page fit
-- **Spacing**: Use `\vspace{0.10 cm}` between entries within a section, `\vspace{0.2 cm}` between experience entries
-- **ATS compatibility**: The `\ifPDFTeX` block (lines 41–47) enables glyph-to-unicode mapping for machine-readable PDFs — do not remove
+- **Links**: Use `\hrefWithoutArrow{url}{text}` (a saved copy of `\href` without arrow decoration, defined via `\let\hrefWithoutArrow\href` in the preamble)
+- **PDF metadata**: Update `pdftitle` and `pdfauthor` in the `\usepackage[...]{hyperref}` block when changing the resume owner
+- **Page margins**: Top=0.8cm, Bottom=0.9cm, Left/Right=1.3cm. **When adding or removing content, check the PDF for top/bottom whitespace imbalance and adjust `top`/`bottom` in the `geometry` options accordingly.** Dynamic vertical centering is not possible due to the header's `\vspace{-2cm}` hack — manual margin balancing is required.
+- **Spacing hierarchy** (tuned against a spacing-audit round — biggest gaps between sections, medium between entries, smallest between bullets): section top spacing `0.22 cm` (in `\titlespacing`), `\vspace{0.13 cm}` between entries within a section, `\vspace{0.04 cm}` between an entry title and its bullet points, bullet `itemsep=0.5pt` (in the `highlights` environment). Prefer paying for new content by cutting the weakest/most-redundant entry rather than shrinking these — the current values were set to fix "wall of text" feedback.
+- **ATS compatibility**: The `\ifPDFTeX` block in the preamble enables glyph-to-unicode mapping for machine-readable PDFs — do not remove
 
 ## Common Pitfalls
 
