@@ -40,6 +40,8 @@
 
 \usepackage{charter}
 
+\usepackage[fontsize=9.25pt]{fontsize} % nudge base font up from 9pt for readability
+
 % Some settings:
 \raggedright
 \AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
@@ -164,7 +166,7 @@
             \begin{description}[labelwidth=\skilllabel, leftmargin=\skilllabel, labelsep=0pt, font=\bfseries, style=sameline, itemsep=2pt, parsep=0pt, topsep=0pt]
                 \item[LLM \& GenAI:] RAG, Multi-Agent~Systems, Agentic~AI, LangChain, LangGraph, Vector~Databases, Claude~API, OpenAI~API, Gemini, Fine-Tuning, Prompt~Engineering, LLM~Evaluation, Guardrails, Model~Context~Protocol~(MCP)
                 \item[ML \& NLP:] PyTorch, Hugging~Face, Transformers, TensorFlow, scikit-learn, spaCy, NLTK
-                \item[Cloud \& MLOps:] AWS (Bedrock, SageMaker, Lambda, Step~Functions, Textract, Comprehend, CloudFormation), Databricks (Unity~Catalog, MLflow), GCP, Docker, Kubernetes, CI/CD, MLOps, FastAPI
+                \item[Cloud \& MLOps:] AWS (Bedrock, SageMaker, Lambda, Step~Functions, Textract, Comprehend, CloudFormation), Databricks~(Unity~Catalog,~MLflow), GCP, Docker, Kubernetes, CI/CD, MLOps, FastAPI
                 \item[Languages \& Tools:] Python, TypeScript, SQL, Pandas, NumPy, PostgreSQL, React, Next.js, Git
             \end{description}
         \end{onecolentry}
@@ -181,9 +183,9 @@
         \vspace{0.04 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Architected multi-agent validation pipeline using \textbf{AWS Step Functions}, \textbf{Lambda}, and \textbf{Bedrock} \textbf{Claude API} for vision-based PDF-to-JSON extraction, reducing H-1B processing from 5 days to 10 minutes with production guardrails.
-                \item Constructed RAG system with Titan embeddings, in-memory vector database, and cosine similarity retrieval to resolve ambiguities across 50+ Form I-129 fields, achieving 99\% extraction accuracy.
-                \item Integrated LLM validation layer using \textbf{OpenAI API}, Pydantic schema enforcement, and \textbf{Textract}-based knowledge base, cutting manual verification effort by 90\%.
+                \item Architected a document-processing pipeline using \textbf{AWS Step Functions}, \textbf{Lambda}, and \textbf{Bedrock Claude Opus} for parallel vision-based extraction of H-1B immigration PDFs, reaching 99\% field-level accuracy on real cases.
+                \item Engineered a fault-tolerant, multi-layer validation stage, building its \textbf{OpenAI GPT-4.1-mini} qualitative-review layer, cutting a 2--3 day manual attorney review to under 10 minutes.
+                \item Built a \textbf{RAG} fallback layer (\textbf{Bedrock Titan} embeddings, cosine-similarity retrieval over \textbf{Textract} text) to resolve fields deterministic checks missed, across 11 document types and 225-field I-129 forms.
             \end{highlights}
         \end{onecolentry}
 
